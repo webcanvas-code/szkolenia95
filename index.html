@@ -1,0 +1,452 @@
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCanvas - Szkolenia Kierowców Zawodowych</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for industrial feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #415A77;
+            border-radius: 4px;
+        }
+
+        /* Hide default summary marker */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-[#1B263B] antialiased selection:bg-[#F4D03F] selection:text-[#1B263B]">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-[#1B263B] rounded flex items-center justify-center text-white">
+                        <span class="font-medium tracking-tighter text-sm">Logo</span>
+                    </div>
+                    <span class="font-medium tracking-tight text-[#1B263B]">Nazwa</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#415A77]">
+                    <a href="#services" class="hover:text-[#1B263B] transition-colors">Usługi</a>
+                    <a href="#locations" class="hover:text-[#1B263B] transition-colors">Lokalizacje</a>
+                    <a href="#faq" class="hover:text-[#1B263B] transition-colors">FAQ</a>
+                </div>
+                <a href="#contact"
+                    class="hidden md:flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded bg-[#1B263B] text-white hover:bg-[#415A77] transition-all">
+                    Kontakt
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center bg-[#1B263B] overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9cadcad7-6435-4c02-847c-9fd275300192_1600w.jpg"
+                alt="Szkolenia Kierowców" class="w-full h-full object-cover">
+            <!-- Dark Overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1B263B]/90 via-[#1B263B]/85 to-[#1B263B]/80"></div>
+        </div>
+
+        <!-- Abstract Industrial Background Pattern -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: radial-gradient(#415A77 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full py-20">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#415A77]/30 border border-[#415A77]/50 text-[#F4D03F] text-xs font-medium mb-8 backdrop-blur-sm">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F4D03F] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#F4D03F]"></span>
+                </span>
+                Nowe terminy szkolenia Kod 95
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6 max-w-4xl mx-auto">
+                Szkolenia Kierowców Zawodowych <br>
+                <span class="text-[#F4D03F]">Kod 95 i Certyfikacja</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Szybkie terminy w Gdańsku i Dębnie. Zdobądź PKZ, ukończ szkolenia okresowe i utrzymaj swoją flotę
+                na drodze legalnie i bezpiecznie.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+                <a href="#gdansk"
+                    class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-sm font-medium rounded bg-[#F4D03F] text-[#1B263B] hover:bg-[#e0bc2e] transition-all shadow-lg shadow-[#F4D03F]/20">
+                    <iconify-icon icon="solar:map-point-linear" class="mr-2 text-lg"></iconify-icon>
+                    Oddział Gdańsk
+                </a>
+                <a href="#debno"
+                    class="inline-flex items-center justify-center px-8 py-3.5 border border-gray-600 text-sm font-medium rounded text-white hover:bg-white/5 transition-all">
+                    <iconify-icon icon="solar:steering-wheel-linear" class="mr-2 text-lg"></iconify-icon>
+                    Oddział Dębno
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals Bar -->
+    <div class="bg-[#162032] border-b border-[#2a3850]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-[#2a3850]">
+                <div class="flex items-center justify-center md:justify-start gap-4 px-4 pt-4 md:pt-0">
+                    <div class="p-2 bg-[#2a3850] rounded text-[#F4D03F]">
+                        <iconify-icon icon="solar:calendar-date-linear" width="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="text-white text-sm font-medium">Najszybsze Terminy</p>
+                        <p class="text-[#415A77] text-xs">W Trójmieście</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 px-4 pt-4 md:pt-0">
+                    <div class="p-2 bg-[#2a3850] rounded text-[#F4D03F]">
+                        <iconify-icon icon="solar:bus-linear" width="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="text-white text-sm font-medium">Duży Parking</p>
+                        <p class="text-[#415A77] text-xs">Plac manewrowy dla Ciężarówek</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 px-4 pt-4 md:pt-0">
+                    <div class="p-2 bg-[#2a3850] rounded text-[#F4D03F]">
+                        <iconify-icon icon="solar:check-circle-linear" width="24"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="text-white text-sm font-medium">Wysoka Zdawalność</p>
+                        <p class="text-[#415A77] text-xs">Doświadczeni instruktorzy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Focus: Gdańsk Process -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-[#415A77] text-xs font-semibold tracking-wider uppercase mb-2 block">Oddział
+                    Gdańsk</span>
+                <h2 class="text-3xl font-medium tracking-tight text-[#1B263B]">Proces Szkoleń Okresowych</h2>
+                <p class="mt-4 text-[#415A77] max-w-2xl mx-auto font-light">
+                    Specjalistyczna ścieżka "Szkolenia Okresowe". Prowadzimy Cię przez każdy krok, aby skutecznie
+                    odnowić Twoje kwalifikacje.
+                </p>
+            </div>
+
+            <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gray-200 -z-10 -translate-y-1/2">
+                </div>
+
+                <!-- Step 1 -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-50 rounded-full border border-gray-200 flex items-center justify-center text-[#1B263B] mb-4 z-10 relative">
+                        <iconify-icon icon="solar:stethoscope-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-center mb-2">1. Badania Lekarskie</h3>
+                    <p class="text-sm text-[#415A77] text-center leading-relaxed">
+                        Wykonaj wymagane badania lekarskie i psychologiczne niezbędne dla kierowców zawodowych.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-50 rounded-full border border-gray-200 flex items-center justify-center text-[#1B263B] mb-4 z-10 relative">
+                        <iconify-icon icon="solar:file-check-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-center mb-2">2. Profil PKZ</h3>
+                    <p class="text-sm text-[#415A77] text-center leading-relaxed">
+                        Złóż dokumenty w wydziale komunikacji, aby wygenerować swoje PKZ (Profil Kierowcy Zawodowego).
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white p-6 rounded-xl border border-[#1B263B]/10 shadow-sm hover:shadow-md transition-shadow relative ring-1 ring-[#F4D03F]/50">
+                    <div
+                        class="w-12 h-12 mx-auto bg-[#F4D03F] rounded-full flex items-center justify-center text-[#1B263B] mb-4 z-10 relative shadow-lg shadow-[#F4D03F]/30">
+                        <iconify-icon icon="solar:diploma-verified-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-center mb-2">3. Start Szkolenia</h3>
+                    <p class="text-sm text-[#415A77] text-center leading-relaxed">
+                        Dołącz do naszego 5-modułowego kursu szkoleniowego (Kod 95) i otrzymaj zaktualizowane
+                        kwalifikacje natychmiast.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localities Section -->
+    <section id="locations" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Gdańsk Location -->
+                <div id="gdansk"
+                    class="bg-white rounded-2xl overflow-hidden border border-gray-200 flex flex-col h-full shadow-sm group">
+                    <div class="p-8 pb-0">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-medium tracking-tight text-[#1B263B]">Oddział Gdańsk</h3>
+                                <p class="text-[#415A77] text-sm mt-1">Specjalistyczne Centrum Szkoleń Okresowych</p>
+                            </div>
+                            <div class="p-2 bg-blue-50 text-[#1B263B] rounded-lg">
+                                <iconify-icon icon="solar:city-linear" width="24"></iconify-icon>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mt-6 mb-8">
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kod 95 (Szkolenia Okresowe)
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kursy weekendowe - szybka ścieżka
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Rezerwacje grupowe dla firm
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                        class="mt-auto h-48 bg-gray-100 relative group-hover:bg-gray-200 transition-colors flex items-center justify-center border-t border-gray-100">
+                        <div class="text-center">
+                            <iconify-icon icon="solar:map-point-wave-linear"
+                                class="text-4xl text-[#415A77] mb-2"></iconify-icon>
+                            <p class="text-xs font-medium text-[#415A77] uppercase tracking-wide">Zobacz na Mapie</p>
+                        </div>
+                        <!-- Mock Map Grid -->
+                        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                            style="background-image: linear-gradient(#1B263B 1px, transparent 1px), linear-gradient(90deg, #1B263B 1px, transparent 1px); background-size: 20px 20px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dębno Location -->
+                <div id="debno"
+                    class="bg-white rounded-2xl overflow-hidden border border-gray-200 flex flex-col h-full shadow-sm group">
+                    <div class="p-8 pb-0">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-medium tracking-tight text-[#1B263B]">Oddział Dębno</h3>
+                                <p class="text-[#415A77] text-sm mt-1">Ośrodek Szkolenia Kierowców - Wszystkie Kategorie
+                                </p>
+                            </div>
+                            <div class="p-2 bg-blue-50 text-[#1B263B] rounded-lg">
+                                <iconify-icon icon="solar:steering-wheel-linear" width="24"></iconify-icon>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mt-6 mb-8">
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kategorie: A, B, C, D, E
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kwalifikacja Wstępna
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Duży plac manewrowy
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                        class="mt-auto h-48 bg-gray-100 relative group-hover:bg-gray-200 transition-colors flex items-center justify-center border-t border-gray-100">
+                        <div class="text-center">
+                            <iconify-icon icon="solar:map-point-wave-linear"
+                                class="text-4xl text-[#415A77] mb-2"></iconify-icon>
+                            <p class="text-xs font-medium text-[#415A77] uppercase tracking-wide">Zobacz na Mapie</p>
+                        </div>
+                        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                            style="background-image: linear-gradient(#1B263B 1px, transparent 1px), linear-gradient(90deg, #1B263B 1px, transparent 1px); background-size: 20px 20px;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational FAQ -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-medium tracking-tight text-[#1B263B] mb-8 text-center">Najczęściej Zadawane Pytania
+            </h2>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-100 transition-colors">
+                        <span class="font-medium text-[#1B263B]">Jak uzyskać numer PKZ?</span>
+                        <span class="text-[#415A77] group-open:rotate-180 transition-transform duration-300">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="20"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-[#415A77] leading-relaxed border-t border-gray-200 pt-4">
+                        Musisz odwiedzić lekarza i psychologa, którzy są upoważnieni do badania kierowców. Następnie ze
+                        świadectwami lekarskimi i zdjęciem udaj się do lokalnego Wydziału Komunikacji, aby otrzymać
+                        swoje PKZ (Profil Kierowcy Zawodowego).
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-100 transition-colors">
+                        <span class="font-medium text-[#1B263B]">Jak długo trwa szkolenie okresowe?</span>
+                        <span class="text-[#415A77] group-open:rotate-180 transition-transform duration-300">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="20"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-[#415A77] leading-relaxed border-t border-gray-200 pt-4">
+                        Szkolenie okresowe Kod 95 składa się z 35 godzin teorii. W WebCanvas organizujemy je sprawnie,
+                        zazwyczaj w wyznaczonym okresie lub w weekendy, aby zminimalizować przestoje dla kierowców
+                        zawodowych.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                    <summary
+                        class="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-100 transition-colors">
+                        <span class="font-medium text-[#1B263B]">Jakie są wymagania lekarskie?</span>
+                        <span class="text-[#415A77] group-open:rotate-180 transition-transform duration-300">
+                            <iconify-icon icon="solar:alt-arrow-down-linear" width="20"></iconify-icon>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-sm text-[#415A77] leading-relaxed border-t border-gray-200 pt-4">
+                        Potrzebujesz ważnych zaświadczeń o braku przeciwwskazań zarówno od lekarza medycyny pracy, jak i
+                        psychologa transportu. Muszą być odnawiane co 5 lat (lub co 30 miesięcy dla kierowców powyżej 60
+                        roku życia).
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="bg-[#1B263B] text-white pt-20 pb-12 border-t border-[#2a3850]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-[#1B263B]">
+                            <span class="font-medium tracking-tighter text-sm">WC</span>
+                        </div>
+                        <span class="font-medium tracking-tight text-white text-xl">WebCanvas</span>
+                    </div>
+                    <p class="text-[#415A77] mb-8 text-sm max-w-sm leading-relaxed">
+                        Profesjonalne centrum szkoleniowe dedykowane branży transportowej. Budujemy bezpieczniejsze
+                        drogi poprzez lepszą edukację.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-sm text-gray-300">
+                            <iconify-icon icon="solar:phone-calling-linear" class="text-[#F4D03F]"></iconify-icon>
+                            <span>+48 123 456 789</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-gray-300">
+                            <iconify-icon icon="solar:letter-linear" class="text-[#F4D03F]"></iconify-icon>
+                            <span>contact@webcanvas.pl</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Conversion Form -->
+                <div class="bg-[#243047] p-6 rounded-xl border border-[#2a3850] shadow-2xl">
+                    <h3 class="text-lg font-medium mb-4">Poproś o Oddzwonienie</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-gray-400 mb-1">Imię i
+                                    nazwisko</label>
+                                <input type="text" id="name"
+                                    class="w-full bg-[#1B263B] border border-[#415A77] rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-[#F4D03F] transition-colors"
+                                    placeholder="Jan Kowalski">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-medium text-gray-400 mb-1">Numer
+                                    telefonu</label>
+                                <input type="tel" id="phone"
+                                    class="w-full bg-[#1B263B] border border-[#415A77] rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-[#F4D03F] transition-colors"
+                                    placeholder="+48 ...">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="location" class="block text-xs font-medium text-gray-400 mb-1">Preferowana
+                                lokalizacja</label>
+                            <div class="relative">
+                                <select id="location"
+                                    class="w-full bg-[#1B263B] border border-[#415A77] rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-[#F4D03F] appearance-none transition-colors">
+                                    <option>Gdańsk (Kod 95)</option>
+                                    <option>Dębno (Prawo Jazdy)</option>
+                                </select>
+                                <iconify-icon icon="solar:alt-arrow-down-linear"
+                                    class="absolute right-3 top-2.5 text-gray-400 pointer-events-none"></iconify-icon>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-[#F4D03F] text-[#1B263B] font-semibold text-sm py-2.5 rounded hover:bg-[#e0bc2e] transition-colors flex items-center justify-center gap-2">
+                            <span>Skontaktuj się</span>
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-[#2a3850] text-center text-xs text-[#415A77]">
+                © 2023 WebCanvas - Ośrodek Szkolenia Kierowców. Wszelkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Floating Call Button -->
+    <a href="tel:+48123456789"
+        class="fixed bottom-6 right-6 z-40 md:hidden flex items-center justify-center w-14 h-14 bg-[#F4D03F] rounded-full shadow-lg shadow-[#F4D03F]/40 text-[#1B263B] animate-bounce">
+        <iconify-icon icon="solar:phone-calling-bold" width="24"></iconify-icon>
+    </a>
+
+
+</body>
+
+</html>
