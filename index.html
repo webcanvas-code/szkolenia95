@@ -206,6 +206,53 @@
             </div>
         </div>
     </section>
+     <!-- Localities Section -->
+    <section id="locations" class="py-20 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Gdańsk Location -->
+                <div id="gdansk"
+                    class="bg-white rounded-2xl overflow-hidden border border-gray-200 flex flex-col h-full shadow-sm group">
+                    <div class="p-8 pb-0">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-medium tracking-tight text-[#1B263B]">Oddział Gdańsk</h3>
+                                <p class="text-[#415A77] text-sm mt-1">Specjalistyczne Centrum Szkoleń Okresowych</p>
+                            </div>
+                            <div class="p-2 bg-blue-50 text-[#1B263B] rounded-lg">
+                                <iconify-icon icon="solar:city-linear" width="24"></iconify-icon>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mt-6 mb-8">
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kod 95 (Szkolenia Okresowe)
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Kursy weekendowe - szybka ścieżka
+                            </li>
+                            <li class="flex items-center text-sm text-[#415A77]">
+                                <iconify-icon icon="solar:check-read-linear" class="mr-3 text-[#F4D03F]"></iconify-icon>
+                                Rezerwacje grupowe dla firm
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div
+                        class="mt-auto h-48 bg-gray-100 relative group-hover:bg-gray-200 transition-colors flex items-center justify-center border-t border-gray-100">
+                        <div class="text-center">
+                            <iconify-icon icon="solar:map-point-wave-linear"
+                                class="text-4xl text-[#415A77] mb-2"></iconify-icon>
+                            <p class="text-xs font-medium text-[#415A77] uppercase tracking-wide">Zobacz na Mapie</p>
+                        </div>
+                        <!-- Mock Map Grid -->
+                        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                            style="background-image: linear-gradient(#1B263B 1px, transparent 1px), linear-gradient(90deg, #1B263B 1px, transparent 1px); background-size: 20px 20px;">
+                        </div>
+                    </div>
+                </div>
 </body>
 
 </html>
