@@ -83,10 +83,33 @@
 
     <section class="py-16 md:py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <!-- Oddziały obok siebie -->
+            <div class="mb-10 flex flex-col sm:flex-row justify-center gap-5 w-full sm:w-auto">
+                <a href="#kontakt-gdansk"
+                    class="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 border-2 border-[#F4D03F] text-sm sm:text-base font-semibold rounded-lg bg-[#F4D03F] text-[#1B263B] hover:bg-[#e0bc2e] hover:border-[#e0bc2e] transition-all shadow-lg shadow-[#F4D03F]/30 hover:shadow-xl hover:shadow-[#F4D03F]/40 hover:-translate-y-0.5 group">
+                    <iconify-icon icon="solar:map-point-linear" class="mr-2.5 text-lg sm:text-xl"></iconify-icon>
+                    <span class="flex flex-col items-start leading-tight">
+                        <span>Oddział Gdańsk</span>
+                        <span class="text-[11px] sm:text-xs font-normal opacity-80">woj. pomorskie</span>
+                    </span>
+                    <iconify-icon icon="solar:arrow-right-linear"
+                        class="ml-3 text-lg group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <a href="#kontakt-debno"
+                    class="inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 border-2 border-[#F4D03F] text-sm sm:text-base font-semibold rounded-lg bg-[#F4D03F] text-[#1B263B] hover:bg-[#e0bc2e] hover:border-[#e0bc2e] transition-all shadow-lg shadow-[#F4D03F]/30 hover:shadow-xl hover:shadow-[#F4D03F]/40 hover:-translate-y-0.5 group">
+                    <iconify-icon icon="solar:map-point-linear" class="mr-2.5 text-lg sm:text-xl"></iconify-icon>
+                    <span class="flex flex-col items-start leading-tight">
+                        <span>Oddział Dębno</span>
+                        <span class="text-[11px] sm:text-xs font-normal opacity-80">woj. zachodniopomorskie</span>
+                    </span>
+                    <iconify-icon icon="solar:arrow-right-linear"
+                        class="ml-3 text-lg group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+            </div>
 
-                <!-- Contact Information Column -->
-                <div class="space-y-12">
+            <div class="space-y-16">
+                <!-- Oddziały: dwie kolumny -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
                     <!-- Gdańsk Card -->
                     <div id="kontakt-gdansk"
@@ -123,6 +146,16 @@
                                     </div>
                                     <span class="text-[#1B263B]">gdansk@szkoleniakierowcy.pl</span>
                                 </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded bg-white flex items-center justify-center text-[#1B263B] shrink-0 border border-gray-100 shadow-sm">
+                                        <iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-[#1B263B]">Adres</h4>
+                                        <p class="text-sm text-[#415A77]">ul. Międzygwiezdna 29<br>80-299 Gdańsk</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <a href="tel:+48602111009"
@@ -151,7 +184,7 @@
                             <div class="space-y-4 mb-8">
                                 <a href="tel:+48504983346" class="flex items-center group/link">
                                     <div
-                                        class="w-10 h-10 rounded bg-white flex items-center justify-center text-[#1B263B] shadow-sm mr-4 group-hover/link:bg-[#1B263B] group-hover/link:text-white transition-colors">
+                                        class="w-10 h-10 rounded bg-white flex items-center justify-center text-[#F4D03F] shadow-sm mr-4 group-hover/link:bg-[#F4D03F] group-hover/link:text-[#1B263B] transition-colors">
                                         <iconify-icon icon="solar:phone-calling-linear" width="20"></iconify-icon>
                                     </div>
                                     <div>
@@ -168,11 +201,21 @@
                                     </div>
                                     <span class="text-[#1B263B]">debno@szkoleniakierowcy.pl</span>
                                 </div>
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded bg-white flex items-center justify-center text-[#1B263B] shrink-0 border border-gray-100 shadow-sm">
+                                        <iconify-icon icon="solar:map-point-linear" width="24"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-[#1B263B]">Adres</h4>
+                                        <p class="text-sm text-[#415A77]">ul. Jana Pawła II 34<br>74-400 Dębno</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <a href="tel:+48504983346"
-                                class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border border-[#1B263B] text-[#1B263B] font-medium rounded hover:bg-[#1B263B] hover:text-white transition-colors">
-                                <iconify-icon icon="solar:phone-calling-linear" class="mr-2"></iconify-icon>
+                                class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-[#F4D03F] text-[#1B263B] font-medium rounded hover:bg-[#e0bc2e] transition-colors shadow-lg shadow-[#F4D03F]/20">
+                                <iconify-icon icon="solar:phone-calling-bold" class="mr-2"></iconify-icon>
                                 Zadzwoń Teraz
                             </a>
                         </div>
@@ -180,9 +223,9 @@
 
                 </div>
 
-                <!-- Contact Form Column -->
-                <div class="lg:pl-10">
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 lg:p-10 sticky top-24">
+                <!-- Contact Form Below -->
+                <div class="max-w-3xl mx-auto w-full">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 lg:p-10">
                         <h3 class="text-2xl font-medium text-[#1B263B] mb-2">Formularz Zgłoszeniowy</h3>
                         <p class="text-sm text-[#415A77] mb-8">Wypełnij formularz, a oddzwonimy do Ciebie w ciągu 30
                             minut (w godzinach pracy).</p>
@@ -314,7 +357,7 @@
                         </div>
                         <div class="flex items-center gap-3 text-sm text-gray-300">
                             <iconify-icon icon="solar:letter-linear" class="text-[#F4D03F]"></iconify-icon>
-                            <span>gdansk@szkoleniakierowcy.pl</span>
+                            <span>gdansk@szkoleniakierowcy.pl / debno@szkoleniakierowcy.pl</span>
                         </div>
                     </div>
                 </div>
